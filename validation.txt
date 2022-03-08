@@ -1,0 +1,24 @@
+import java.util.regex.*;
+import java.util.*;
+public class email {
+
+	public static boolean isValid (String email) {
+		// TODO Auto-generated method stub
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+		Pattern pattern = Pattern.compile(regex);
+		if (email == null)
+		return false;
+		return pattern.matcher(email).matches();
+		}
+		public static void main(String args[]){
+		String email = "Dhanendra@yahoo.com";
+		boolean result = isValid(email);
+		if (result == true)
+		System.out.println("Provided email address "+ email+ " is valid \n");
+		else
+		System.out.println("Provided email address "+ email+ " is invalid \n");
+		}
+		
+	}
+
+
